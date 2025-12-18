@@ -1,50 +1,35 @@
-# Welcome to your Expo app 👋
+Project name: CapGain
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+CapGain is a specialized, client-side application designed to help cryptocurrency investors estimate the potential value and profit of their holdings based on hypothetical future market capitalization (MCAP) targets. It is built using HTML, Tailwind CSS, JavaScript, and uses Firebase Firestore for secure data persistence.
 
-## Get started
+1. The CapGain Application Functions (Views)
 
-1. Install dependencies
+The application is structured around four main views, accessed via the fixed bottom navigation bar:
 
-   ```bash
-   npm install
-   ```
+Home: Provides an overview of the application, its purpose a list of the services offered
+ User onboarding and purpose explanation.
 
-2. Start the app
+Calculate: The core utility where the user inputs their investment parameters and the projected market cap goal.
+Performs the profit and target price calculation and displays results instantly.
 
-   ```bash
-   npx expo start
-   ```
+History: Displays a chronological list of all previous calculations saved by the authenticated user.
+Securely retrieves and renders past projections from Firebase Firestore.
 
-In the output, you'll find options to open the app in a
+Profile: Shows the user's authentication status and their unique userId.
+Confirms user identity and provides necessary troubleshooting information.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+2. Core Functionality: How the Calculation Works
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+The app's main purpose is to determine the potential profit by projecting the coin's future price. This is done through a simple, yet powerful, three-step calculation process based on the user's inputs:
 
-## Get a fresh project
+A. Required User Inputs
+1. Initial Investment ($): How much money you spent.
 
-When you're ready, run:
+2. Purchase Price ($): The price per coin when you bought it.
 
-```bash
-npm run reset-project
-```
+3. Circulating Supply (Coins): The current total number of coins in circulation. (Crucial for determining Market Cap math.)
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+4. Target Market Cap ($): The desired future market capitalization of the coin.
 
-## Learn more
 
-To learn more about developing your project with Expo, look at the following resources:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
